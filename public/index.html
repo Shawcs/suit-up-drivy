@@ -34,13 +34,13 @@ height: 300px;
     <!-- Top row, always visible -->
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">DRIVY</span>
+      <span class="mdl-layout-title" style="font-size:500%"style="font-family:Courier New">DRIVY</span>
 
 
 <style type="text/css">
 .roundedImage{
     overflow:hidden;
-    margin-left: 50%;
+    margin-left: 30%;
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
     border-radius:150px;
@@ -116,20 +116,23 @@ height: 300px;
     </label>
 
     </div>
-
      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="compute">Compute</a>
  
+<div class="mdl-grid">
     <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
-      {{#actors}}
+    <script id="template" type="x-tmpl-mustache">{{#actors}}
         <div class="actor">
           <span>
-
-          {{who}}
-
+          <div class="demo-card-wide mdl-card mdl-shadow--1dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{who}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">{{amount}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{type}}</a>
+  </div>
           </span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
         </div>
       {{/actors}}
     </script>
@@ -137,11 +140,8 @@ height: 300px;
     <script src="drivy.js"></script>
     <script src="index.js"></script>
   </body>
-
-
-
     </div>
   </main>
-</div
-
+</div>
+</div>
 </html>
