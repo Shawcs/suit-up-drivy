@@ -1,26 +1,133 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.red-pink.min.css" />
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="suit.css">
+
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
-  </head>
+
+<!-- Uses a header that contracts as the page scrolls down. -->
+<style>
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+
+
+}
+</style>
+
+<style>
+.mdl-layout__header-row {
+  padding-right: 0;
+height: 300px;
+
+}
+</style>
+
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">DRIVY</span>
+
+
+<style type="text/css">
+.roundedImage{
+    overflow:hidden;
+    margin-left: 50%;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:150px;
+    width:350px;
+    height:300px;
+}
+</style>
+<div class="roundedImage" style="background:url(voiture.gif) no-repeat 0px 0px;">
+    &nbsp;
+</div>
+      <div class="mdl-layout-spacer" ></div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">    
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+ 
+
   <body>
     <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
+      <style>
+.mdl-textfield .mdl-js-textfield {
+  margin-left: 20%;
+
+}
+</style>
+
+        <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input model" type="text" id="sample1">
+        <label class="mdl-textfield__label" for="sample1">Car model</label>
+        </div>
+
+    <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input price-by-day" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="priceday">
+    <label class="mdl-textfield__label" for="priceday">Price per Day</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
     </div>
+
+
+    <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input price-by-km" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="pricekm">
+    <label class="mdl-textfield__label" for="pricekm">Price by Km </label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+    </div>
+      
+
+   </div>
+
     <div id="rental">
       <input class="begin" type="date" placeholder="Rental begin date"/>
+      
       <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+  
+    <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input distance" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="distance">
+    <label class="mdl-textfield__label" for="distance">DIstance in Km </label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
     </div>
-    <button id="compute">Compute</button>
+
+    <label class="model mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect option" for="checkbox-2">
+    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+    <span class="mdl-checkbox__label">Option avalable</span>
+    </label>
+
+    </div>
+
+     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="compute">Compute</a>
+ 
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
-          <span>{{who}}</span>
+          <span>
+
+          {{who}}
+
+          </span>
           <span>{{type}}</span>
           <span>{{amount}}</span>
         </div>
@@ -30,4 +137,11 @@
     <script src="drivy.js"></script>
     <script src="index.js"></script>
   </body>
+
+
+
+    </div>
+  </main>
+</div
+
 </html>
