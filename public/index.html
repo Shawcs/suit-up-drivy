@@ -27,6 +27,11 @@
 height: 300px;
 
 }
+.mdl-layout-title{
+
+margin-left: 15%;
+border-top: 0px;
+}
 </style>
 
 <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
@@ -71,14 +76,15 @@ height: 300px;
 
   <body>
 
-
-    <div id="car">
       <style>
-.mdl-textfield {
-
+.mdl-textfield__input .mdl-textfield__label .mdl-textfield__error {
+  margin-left: 20%;
 
 }
 </style>
+
+    <div id="car" classe="page">
+
 
         <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input model" type="text" id="sample1">
@@ -129,19 +135,19 @@ width: 300px;
  </style>
      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="compute">Compute</a>
 
+    <div class="mdl-grid">
 
-<div class="mdl-grid">
-    <div id="actors"></div>
+    <div id="actors">
     <script id="template" type="x-tmpl-mustache">{{#actors}}
         <div class="actor">
           <span>
-          <div class="demo-card-wide mdl-card mdl-shadow--1dp">
-  <div class="mdl-card__title">
+          <div class="mdl-card mdl-checkbox__label mdl-shadow--1dp">
+    <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">{{who}}</h2>
-  </div>
-  <div class="mdl-card__supporting-text">{{amount}}
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
+    </div>
+    <div class="mdl-card__supporting-text">{{amount}}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{type}}</a>
   </div>
           </span>
@@ -151,9 +157,9 @@ width: 300px;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
-  </body>
+     </body>
     </div>
   </main>
-</div>
-</div>
+  </div>
+  </div>
 </html>
